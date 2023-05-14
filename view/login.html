@@ -1,0 +1,54 @@
+<head>
+  <link href="style1.css" rel="stylesheet" type="text/css" />
+  <style>
+    body {
+      background-color: #2d2b40;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box_cont">
+      <form id="form1">
+        <div class="form">
+          <h2>Sign in</h2>
+          <div class="inputBox">
+            <span>Username</span>
+            <input type="text" id="name" />
+            <!-- <i></i> -->
+          </div>
+          <div class="inputBox">
+            <span>Password</span>
+            <input type="password" id="password" />
+            <i></i>
+          </div>
+          <div class="links">
+            <a href="#">Forgot Password</a>
+            <a href="#!/registration">Signup</a>
+          </div>
+          <input type="submit" value="Login" id="logsubmit" />
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    const name = document.getElementById("name");
+    const password = document.getElementById("password");
+    const form = document.getElementById("form");
+    form.addEventListener("submit", (e) => {
+      let message = [];
+      console.log("hellothere");
+      if (name.value === "" || name.value == null) {
+        message.push("Name is required");
+      }
+      if (password.value.length <= 8) {
+        message.push("Password must be longer than 8 characters");
+      }
+
+      if (messages.length > 0) {
+        e.preventDefault();
+        alert(message.join(", "));
+      }
+    });
+  </script>
+</body>

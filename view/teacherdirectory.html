@@ -1,0 +1,28 @@
+<div class="content">
+    <button ng-click="order='name'">Order by Name</button>
+    <button ng-click="order='education'">Order by Education</button>
+    <input type="text" ng-model="search" />
+    <h1>{{humans}}</h1>
+  <ul>
+    <li ng-repeat="teacher in teachers | orderBy: order | filter: search " >
+      <img ng-src="{{teacher.thumb}}" ng-show="teacher.thumb"/>
+      <h3>{{teacher.name}} - {{teacher.education}}</h3>
+      <div class="remove" ng-click="removeTeacher(teacher)">x</div>
+      <p>Phone: {{teacher.phone}}</p>
+      <p>Date of Birth: {{teacher.dob}}</p>
+      <p>Gender: {{teacher.gender}}</p>
+      <p>Area of Expertise: {{teacher.area_of_expertise}}</p>
+      <p>Email: {{teacher.email}}</p>
+    </li>
+  </ul>
+  <form ng-submit="addTeacher()">
+    <input type="text" placeholder="name" ng-model="newteacher.name"/>
+    <input type="text" placeholder="education" ng-model="newteacher.education"/>
+    <input type="text" placeholder="area of expertise" ng-model="newteacher.area_of_expertise"/>
+    <input type="text" placeholder="phone" ng-model="newteacher.phone"/>
+    <input type="date" placeholder="dob" ng-model="newteacher.dob"/>
+    <input type="text" placeholder="gender" ng-model="newteacher.gender"/>
+    <input type="text" placeholder="email" ng-model="newteacher.email"/>
+    <input type="submit" value="Add new teacher"/>
+  </form>
+</div>

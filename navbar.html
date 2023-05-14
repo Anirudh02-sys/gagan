@@ -1,0 +1,89 @@
+
+<head>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="navbarstyle.css" />
+  </head>
+<!--This a navbar , concepts used : <img>,Ordered and unordered list, <a>-->
+<!--Css external internal and inline used-->
+<header>
+    <nav ng-show="isLoggedIn">
+      <ul>
+        <div class="links">
+          <li>
+            <a href="profile.html"
+              ><img
+                src="https://randomuser.me/api/portraits/men/51.jpg"
+                width="80px"
+                height="80px"
+                class = "profile_pic"
+            /></a>
+          </li> 
+          <li><a class="typed" href="#">About</a></li>
+          <li><a class="typed" href="#">Fields/Departments</a></li>
+          <li><a class="typed" href="#!/studentdirectory">Student Directory</a></li>
+          <li><a class="typed" href="#">Connections</a></li>
+          <li>
+            <div class="search">
+              <form action="#">
+                <input
+                  type="text"
+                  placeholder=" Search Courses"
+                  name="search"
+                />
+                <button class="move-pg">
+                  <span>Search</span>
+                </button>
+              </form>
+            </div>
+          </li>
+        </div>
+      </ul>
+    </nav>
+
+    <nav ng-show="!isLoggedIn">
+      <ul>
+        <div class="links">
+          <li>
+            <a href="profile.html"
+              ><img
+                src="guest.jpg"
+                width="80px"
+                height="80px"
+                class = "profile_pic"
+            /></a>
+          </li> 
+          <li><a class="typed" href="#">About</a></li>
+          <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="typed">Fields</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+          <li><a class="typed" href="#">Login/Sign Up</a></li>
+          <li>
+            <div class="search">
+              <form action="#">
+                <input
+                  type="text"
+                  placeholder=" Search Courses"
+                  name="search"
+                />
+                <button class="move-pg">
+                  <span>Search</span>
+                </button>
+              </form>
+            </div>
+          </li>
+        </div>
+      </ul>
+    </nav>
+
+    
+  </header>
+  

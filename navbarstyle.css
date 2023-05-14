@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap");
+
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+nav {
+    background-color: #23242a;
+    height: 6rem;
+  }
+  ul {
+    list-style-type: none;
+  }
+
+.links
+{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.typed
+{
+    margin: 10px 0px;
+    font-size: 1.3em;
+    color: #8f8f8f;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.links a:hover,
+.links a:nth-child(2)
+{
+    color: #45f3ff;
+}
+
+.profile_pic{
+    border-radius:60%;
+    height: 70%;
+    padding-top: 10%;
+    transition: 0.1s;
+}
+
+.profile_pic:hover{
+    scale:1.05;
+}
+
+input{
+    border-radius: 8px;
+    padding-left: 2% ;  
+    padding: 11px 25px;
+ 
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button {
+    border-radius: 8px;
+    padding-left: 2% ;  
+    padding: 11px 25px;
+ 
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.move-pg{
+    transition: 0.1s;
+}
+
+.move-pg:hover{
+    scale:1.05;
+    background-color: #45f3ff;
+
+}
+
+header {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    position: relative;
+    top:0;
+    z-index:1;
+    width: 100%;
+
+}

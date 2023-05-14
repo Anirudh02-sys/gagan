@@ -1,0 +1,29 @@
+<head>
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<div class="content">
+    <button ng-click="order='name'">Order by Name</button>
+    <button ng-click="order='gpa'">Order by GPA</button>
+    <input type="text" ng-model="search" />
+  <ul>
+    <li ng-repeat="student in students | orderBy: order | filter: search " >
+      <img ng-src="{{student.thumb}}" ng-show="student.thumb"/>
+      <h3>{{student.name}} - {{student.email}}</h3>
+      <div class="remove" ng-click="removeStudent(student)">x</div>
+      <p>Phone: {{student.phno}}</p>
+      <p>Date of Birth: {{student.dob}}</p>
+      <p>Gender: {{student.gender}}</p>
+    </li>
+  </ul>
+  <form ng-submit="addStudent()" id="form">
+    <input type="text" placeholder="name" ng-model="newstudent.name" id="name"/>
+    <input type="text" placeholder="major" ng-model="newstudent.major" id="major"/>
+    <input type="text" placeholder="gpa" ng-model="newstudent.gpa" id="gpa"/>
+    <input type="text" placeholder="email" ng-model="newstudent.email" id="email"/>
+    <input type="text" placeholder="phone" ng-model="newstudent.phno" id="phone"/>
+    <input type="date" placeholder="dob" ng-model="newstudent.dob" id="date"/>
+    <input type="text" placeholder="gender" ng-model="newstudent.gender" id="gender"/>
+    <input type="submit" value="Add new student"/>
+  </form>
+</div>

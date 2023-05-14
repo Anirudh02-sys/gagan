@@ -1,0 +1,79 @@
+<head>
+  <style>
+    .c_img{
+      width: 1500px;
+      height: 600px;
+      padding-left: 10%;
+    }
+    .carousel-caption{
+      background: rgb(61, 61, 178);
+      width: 80%;
+      margin: 30px auto;
+      border-radius: 10px;
+      opacity: 80%;
+      margin-bottom: 14em;
+    }
+    .c-heading{
+      font-size: 40px;
+      font-weight: 600;
+      background-image: linear-gradient(to left, rgb(252, 252, 255), rgb(77, 77, 165));
+      color: transparent;
+      background-clip: text;
+      text-shadow: 2em;
+      -webkit-background-clip: text;
+    }
+  
+  </style>
+
+</head>
+
+<div class="about">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="home_pic_2.jpg" class="c_img" alt="pic_1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="c-heading">Join the Prudent Community</h5>
+          <p>Welcome to Prudent, the online platform that connects students and professors from all over the world to foster knowledge-sharing and meaningful discussions. Our website, built on AngularJS, provides a responsive and dynamic user experience that encourages collaboration and learning.</p>
+          <p>Browse and learn through a simple click of a button.Click the buttton below to join now!!</p>
+          <button id="join" class="move-pg">Join Now</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="home_pic_3.jpg" class="c_img" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="c-heading">Login to engage in discussions</h5>
+          <p>Our website features a range of tools and features that allow users to create profiles, share resources and information, and participate in discussions related to their field of study. Through our website, users can connect with other like-minded individuals and expand their knowledge beyond the classroom.</p>
+          <a href="#!/login">
+          <button id="login" class="move-pg" ng-click="">Login Now</button>
+        </a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="home_pic_4.jpg" class="c_img" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="c-heading">Getting Started with Prudent</h5>
+          <video width="320" height="240" controls>
+            <source src="welcome_to_prudent.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <br>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+</div>
